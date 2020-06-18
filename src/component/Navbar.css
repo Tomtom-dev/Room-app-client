@@ -1,0 +1,13 @@
+nav ul{
+    display:flex;
+    justify-content:space-around;
+}
+
+.button:hover {
+    
+    color: blue;
+}
+
+.active {
+    background-color:  rgb(52, 97, 97);;
+}
