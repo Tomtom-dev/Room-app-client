@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import './index.css'
-import PresentationPortfolio2 from './PresentationPortfolio2.mp4'
+// import PresentationPortfolio2 from './PresentationPortfolio2.mp4'
 
 
 export default function Homepage() {
@@ -12,7 +12,7 @@ export default function Homepage() {
         <header>
             <div >
 
-            <iframe id="background-video" src={videosource}></iframe>
+            <iframe id="background-video" src={videosource} title="video"></iframe>
 
             
                 {/* <video id="background-video" autoPlay loop muted >

@@ -1,0 +1,1 @@
+export const getRoomPage = state => state.rooms
