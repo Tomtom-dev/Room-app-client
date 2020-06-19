@@ -6,10 +6,10 @@ export default function Navbar (){
     return(
         <nav className="nav-wrapper grey darken-3">
                 <ul >
-                    <NavLink to="/homepage" class="button" >Home</NavLink>
-                    <NavLink to="/rooms" class="button">Rooms</NavLink>
-                    <NavLink to="/announce" class="button">post announce</NavLink>
-                    <NavLink to="/login" class="button">Login</NavLink>
+                    <NavLink to="/homepage" className="button" >Home</NavLink>
+                    <NavLink to="/rooms" className="button">Rooms</NavLink>
+                    <NavLink to="/announce" className="button">post announce</NavLink>
+                    <NavLink to="/login" className="button">Login</NavLink>
                 </ul>
         </nav>
     )
