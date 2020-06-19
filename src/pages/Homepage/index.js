@@ -6,14 +6,18 @@ import PresentationPortfolio2 from './PresentationPortfolio2.mp4'
 
 export default function Homepage() {
     
-    console.log(PresentationPortfolio2);
-    
-    return (
-        <header >
+    const videosource="https://www.youtube.com/embed/r2-XL3P_ZNE?controls=0&showinfo=01&rel=0&autoplay=1&loop=1&playlist=r2-XL3P_ZNE&mute=1"
+
+    return(
+        <header>
             <div >
-                <video id="background-video" autoPlay loop muted >
-                        <source src={PresentationPortfolio2} type="video/mp4"/>
-                </video>
+
+            <iframe id="background-video" src={videosource}></iframe>
+
+            
+                {/* <video id="background-video" autoPlay loop muted >
+                        <source src={videosource} type="video/mp4"/>
+                </video> */}
             </div>
             <div className="header-overlay"></div>
             <div className="header-content">
