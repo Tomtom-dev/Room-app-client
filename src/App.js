@@ -6,6 +6,7 @@ import PostAnnounce from "./pages/PostAnnounce"
 import Rooms from './pages/Rooms'
 import Login from './pages/Login'
 import Navbar from './component/Navbar'
+import SignUp from './pages/SignUp'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/rooms" component={Rooms}/>
             <Route exact path="/announce" component={PostAnnounce}/>
             <Route exact path="/login" component={Login}/>
+            <Route exact path="/signup" component={SignUp}/>
           </Switch>
       </div>
     </Router>
