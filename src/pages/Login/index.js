@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import { useDispatch} from "react-redux";
 import { Link } from "react-router-dom";
 // import { Col } from "react-bootstrap";
-import "./index.css"
+import "./Login.css"
 
 export default function Login() {
 
@@ -22,24 +22,21 @@ export default function Login() {
     return (
         <div>
             <Container>
-                <Form >
+                <Form className="contain" >
                 <h2 >Login</h2>
                     <Form.Group  controlId="formBasicEmail" className="form-size">
-                        <Form.Label>Email address</Form.Label>
+                        
                         <Form.Control 
                         value={email}
                         onChange={event=>setEmail(event.target.value)}
                         type="email" 
-                        placeholder="Enter email"
+                        placeholder="Email"
                         required
                         />
-                        <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                        </Form.Text>    
+                            
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword" className="form-size">
-                        <Form.Label>Password</Form.Label>
                         <Form.Control 
                         value={password}
                         onChange={event=>setPassword(event.target.value)}
@@ -53,6 +50,7 @@ export default function Login() {
                         <Button variant="primary" type="submit" onClick={submitForm}>
                             Log in
                         </Button>
+                        <span> | Not registered ? </span>
                         <Link to="/signup" style={{ textAlign: "center" }}>
                             Sign Up
                         </Link>
