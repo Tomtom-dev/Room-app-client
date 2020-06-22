@@ -10,20 +10,21 @@ export default function SignUp() {
                 <Form className="form-size contain">
                 <h2>Sign up</h2>
                     <FormGroup>
-                        <Input type='email' placeholder="Name"></Input>
+                        <Input type='text' placeholder="Name"></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Input type='email' placeholder="Age"></Input>
+                        <Input type='number' placeholder="Age"></Input>
                     </FormGroup>
                     <FormGroup>
                         <Input type='email' placeholder="Email"></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Input type='email' placeholder="Password"></Input>
+                        <Input type='password' placeholder="Password"></Input>
                     </FormGroup>
 
                     <div>
                     <FormGroup >
+                        <Label><Input type="checkbox"></Input></Label>
                     <Button color="primary"  type="submit" onClick={()=>{}}>Register</Button>
                     </FormGroup>
                     </div>
