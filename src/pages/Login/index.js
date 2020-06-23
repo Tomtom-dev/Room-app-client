@@ -2,21 +2,32 @@ import React,{useState} from 'react'
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { useDispatch} from "react-redux";
-import { Link } from "react-router-dom";
-// import { Col } from "react-bootstrap";
+import { useDispatch, useSelector} from "react-redux";
+import { Link,useHistory } from "react-router-dom";
+import {login} from "../../store/user/action"
+import { selectToken } from "../../store/user/selector";
+// import {selectUserName} from "../../store/user/selector";
+// import {selectUserEmail} from "../../store/user/selector";
 import "./Login.css"
 
 export default function Login() {
 
     const dispatch = useDispatch();
+    const token = useSelector(selectToken);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const history = useHistory();
 
     function submitForm (event){
         console.log('hi');
+        
         event.preventDefault();
+        dispatch(login(email,password))
+        console.log(email, password);
+
+        setEmail("");
+        setPassword("");
     }
 
     return (
@@ -55,10 +66,9 @@ export default function Login() {
                             Sign Up
                         </Link>
                     </Form.Group>
-        
+                    
                 </Form> 
             </Container>
-            
         </div>
     )
 }

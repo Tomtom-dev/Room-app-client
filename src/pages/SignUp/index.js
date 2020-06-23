@@ -27,6 +27,7 @@ export default function SignUp() {
                         <Label><Input type="checkbox"></Input></Label>
                     <Button color="primary"  type="submit" onClick={()=>{}}>Register</Button>
                     </FormGroup>
+                    
                     </div>
                 </Form>
             </Container>

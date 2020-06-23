@@ -6,7 +6,7 @@ export default function PostAnnounce() {
         <div>
             <Container >
                 <Form className="form-size contain">
-                    <h1>Post announce</h1>
+                    <h1>Post a room</h1>
                     <FormGroup>
                         <Input type='text' placeholder="title"></Input>
                     </FormGroup>
