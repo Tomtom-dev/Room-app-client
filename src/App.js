@@ -7,6 +7,7 @@ import Rooms from './pages/Rooms'
 import Login from './pages/Login'
 import Navbar from './component/Navbar'
 import SignUp from './pages/SignUp'
+import RoomPageDetail from './component/RoomPageDetail'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" component={Homepage}/>
             <Route exact path="/homepage" component={Homepage}/>
             <Route exact path="/rooms" component={Rooms}/>
+            <Route exact path="/rooms/:id" component={RoomPageDetail}/>
             <Route exact path="/announce" component={PostAnnounce}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/signup" component={SignUp}/>

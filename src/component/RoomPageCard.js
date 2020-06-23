@@ -1,9 +1,10 @@
 import React from 'react'
 import "./RoomPageCard.css"
+import { Link } from "react-router-dom";
 
 export default function RoomPageCard(props) {
 
-    const{title,image,description,location}= props
+    const{title,image,description,location,id}= props
 
     return (
         <div >
@@ -13,7 +14,10 @@ export default function RoomPageCard(props) {
                     <h5>Title :{title}</h5>
                     <p>Description : {description}</p>
                     <p>City : {location}</p>
-                    <button>See more</button>
+                    <Link to={`rooms/${id}`}>
+                        <button>See more</button>
+                    </Link>
+                    
                 </div>
             </section>
         </div>
