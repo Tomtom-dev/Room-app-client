@@ -10,8 +10,6 @@ export default function Rooms() {
     const roomPages= useSelector(getRoomPage)
     const dispatch = useDispatch()
 
-    console.log('what is it ?', roomPages);
-
     useEffect(()=>{
         dispatch(fetchRooms())
     },[])
@@ -19,8 +17,6 @@ export default function Rooms() {
     const roomsToRender = () =>
         roomPages.map(room => <RoomPageCard key={room.id}{...room}/>)
     
-
-
     return (
         <div>
             <h1>Rooms</h1>
