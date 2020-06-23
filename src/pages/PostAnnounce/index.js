@@ -1,6 +1,7 @@
 import React from 'react'
 import {Container, Button, Form, Input,FormGroup} from 'reactstrap'
 
+
 export default function PostAnnounce() {
     return (
         <div>
@@ -8,7 +9,7 @@ export default function PostAnnounce() {
                 <Form className="form-size contain">
                     <h1>Post a room</h1>
                     <FormGroup>
-                        <Input type='text' placeholder="title"></Input>
+                        <Input type='text' placeholder="title" ></Input>
                     </FormGroup>
                     <FormGroup>
                         <Input type='text' placeholder="location"></Input>

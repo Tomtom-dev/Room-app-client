@@ -58,14 +58,15 @@ const loginSuccess = userWithToken => {
   }
 }
 
-export const signUp = (name, email, password) => {
+export const signUp = (name, email, password,age) => {
   return async (dispatch, getState) => {
     
     try {
       const response = await axios.post(`http://localhost:4000/signup`, {
         name,
         email,
-        password
+        password,
+        age
       });
       console.log('search',response);
       
