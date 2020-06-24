@@ -26,9 +26,6 @@ export default function RoomPageDetail(props) {
     // const roomDetailToRender = () => 
     // roomSelected.map(roomDetail => <RoomPageCardDetail key={roomDetail.id}{...roomDetail}/>)
 
-    
-    
-
     return (
         <div>
             <RoomPageCardDetail key={roomSelected.id}{...roomSelected}/>

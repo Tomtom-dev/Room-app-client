@@ -20,13 +20,13 @@ export const createNewPost =(newPost)=> async (dispatch, getState)=>{
 
         const userId= getState().userReducer.id
 
-        const {title, location, description, file}= newPost
+        const {title, location, description, image}= newPost
 
         const response = await axios.post(`http://localhost:4000/`,{
             title,
             location,
             description,
-            file,
+            image,
             userId
         })
         dispatch(addNewRoom(response.data));

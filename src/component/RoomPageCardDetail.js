@@ -7,13 +7,14 @@ export default function RoomPageCardDetail(props) {
 
     return (
         <div>
-            <section>
-                
+            <section>  
                 <h2>Offer Details</h2>
-                <p>{title}</p>
-                <p>{location}</p>
-                <p>{description}</p>
-                
+                <img src={image} alt={"the pic"}/>
+                <h2>{title}</h2>
+                <div>
+                    <p>{location}</p>
+                    <p>{description}</p>
+                </div> 
             </section>
         </div>
     )

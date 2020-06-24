@@ -34,14 +34,8 @@ export default function PostAnnounce() {
        })
 
        const file =await res.json()
-
-       console.log('the file',file)
-
-       
        setImage(file.secure_url)
-       
        setLoading(false)
-
    }
 
     console.log('the image', image);

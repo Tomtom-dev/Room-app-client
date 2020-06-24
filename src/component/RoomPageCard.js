@@ -9,10 +9,10 @@ export default function RoomPageCard(props) {
     return (
         <div >
             <section className="RoomCard" >
-                <img src={image} alt={"the pic"} style={{maxWidth:"350px"} }/>
+                <img src={image} alt={"the pic"} style={{maxWidth:"350px", maxHeight:"220px"} }/>
                 <div>
-                    <h5>Title :{title}</h5>
-                    <p>Description : {description}</p>
+                    <h5>{title}</h5>
+                    <p>{description}</p>
                     <p>City : {location}</p>
                     <Link to={`rooms/${id}`}>
                         <button>See more</button>
