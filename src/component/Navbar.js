@@ -8,7 +8,7 @@ export default function Navbar (){
                 <ul >
                     <NavLink to="/homepage" className="button" >Home</NavLink>
                     <NavLink to="/rooms" className="button">Rooms</NavLink>
-                    <NavLink to="/announce" className="button">post announce</NavLink>
+                    <NavLink to="/announce" className="button">Post a room</NavLink>
                     <NavLink to="/login" className="button">Login</NavLink>
                 </ul>
         </nav>

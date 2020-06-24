@@ -1,1 +1,1 @@
-export const selectRoomDetails = state => state.roomPageDetailReducer.room
+export const selectRoomDetails = state => state.roomPageDetailReducer.roomSelected
