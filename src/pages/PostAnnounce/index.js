@@ -11,23 +11,53 @@ export default function PostAnnounce() {
     const [title, setTitle] = useState("")
     const [location, setLocation] = useState("")
     const [description, setDescription] = useState("")
-    const [file, setFile] = useState("")
     const dispatch = useDispatch();
-    
 
     const userId = useSelector(selectUserId)
+
+    // add the image with cloudinary
+
+    const [loading, setLoading] = useState(false)
+    const [image, setImage] = useState("")
+
+   const uploadImage = async event =>{
+       const files= event.target.files
+       const data = new FormData()
+       data.append('file', files[0])
+       data.append('upload_preset','geekyimages')
+       setLoading(true)
+
+       const res = await fetch("https://api.cloudinary.com/v1_1/djstug8i6/image/upload",
+       {
+            method:'POST',
+            body:data
+       })
+
+       const file =await res.json()
+
+       console.log('the file',file)
+
+       
+       setImage(file.secure_url)
+       
+       setLoading(false)
+
+   }
+
+    console.log('the image', image);
+    
 
     function submitForm (event){
         event.preventDefault();
         console.log("submit the new post")
-        console.log(title, location, description, file,userId)
+        console.log(title, location, description, userId, image)
 
-        dispatch(createNewPost({title, location, description, file}))
+        dispatch(createNewPost({title, location, description, image}))
 
         setTitle("")
         setLocation("")
         setDescription("")
-        setFile("")
+        setImage("")
     }
 
     return (
@@ -48,7 +78,8 @@ export default function PostAnnounce() {
                          placeholder="description" value={description} onChange={event => setDescription(event.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                    <Input type="file" name="file" id="exampleFile" value={file} onChange={event => setFile(event.target.value)}/>
+                    <img src={image} id="img-preview" style={{maxWidth:'350px'}}/>
+                    <Input type="file" name="file" id="file-upload"  onChange={uploadImage}/>
                     <Button color="primary"  type="submit" onClick={submitForm}>Post</Button>
                     </FormGroup>
                 </Form>
