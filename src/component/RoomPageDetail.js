@@ -19,13 +19,19 @@ export default function RoomPageDetail(props) {
     useEffect(()=>{
         dispatch(fetchRoomById(id))
     },[])
+
+    console.log('test',roomSelected);
     
-    const roomDetailToRender = () => 
-    roomSelected.map(roomDetail => <RoomPageCardDetail key={roomDetail.id}{...roomDetail}/>)
+
+    // const roomDetailToRender = () => 
+    // roomSelected.map(roomDetail => <RoomPageCardDetail key={roomDetail.id}{...roomDetail}/>)
+
+    
+    
 
     return (
         <div>
-            {roomDetailToRender}
+            <RoomPageCardDetail key={roomSelected.id}{...roomSelected}/>
         </div>
     )
 }
