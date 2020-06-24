@@ -16,7 +16,6 @@ export default function PostAnnounce() {
     const userId = useSelector(selectUserId)
 
     // add the image with cloudinary
-
     const [loading, setLoading] = useState(false)
     const [image, setImage] = useState("")
 
@@ -37,8 +36,6 @@ export default function PostAnnounce() {
        setImage(file.secure_url)
        setLoading(false)
    }
-
-    console.log('the image', image);
     
 
     function submitForm (event){
@@ -72,7 +69,7 @@ export default function PostAnnounce() {
                          placeholder="description" value={description} onChange={event => setDescription(event.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                    <img src={image} id="img-preview" style={{maxWidth:'350px'}}/>
+                    {loading?(<h3>Loading ...</h3>):(<img src={image} id="img-preview" style={{maxWidth:'350px'}}/>)}
                     <Input type="file" name="file" id="file-upload"  onChange={uploadImage}/>
                     <Button color="primary"  type="submit" onClick={submitForm}>Post</Button>
                     </FormGroup>

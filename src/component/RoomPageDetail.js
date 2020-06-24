@@ -6,12 +6,12 @@ import {selectRoomDetails} from '../store/roomPageDetail/selector'
 import RoomPageCardDetail from '../component/RoomPageCardDetail'
 // import {} from ''
 
-export default function RoomPageDetail(props) {
+export default function RoomPageDetail() {
 
     const id = useParams().id
     const roomSelected = useSelector(selectRoomDetails)
 
-    const {description,image,location,title}=props
+    // const {description,image,location,title}=props
 
     console.log('checking the data',roomSelected);
 
