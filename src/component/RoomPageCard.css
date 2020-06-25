@@ -12,6 +12,7 @@
     width: 40%;
     border-radius: 5px;
     background-color: #c0f1d9;
+    
   }
   
   .RoomCard:hover {
@@ -26,4 +27,7 @@
     padding: 2px 16px;
   }
 
+  .info-room{
+    margin: auto;
+  }
  
