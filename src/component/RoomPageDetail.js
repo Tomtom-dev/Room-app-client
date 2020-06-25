@@ -13,14 +13,10 @@ export default function RoomPageDetail() {
 
     // const {description,image,location,title}=props
 
-    console.log('checking the data',roomSelected);
-
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(fetchRoomById(id))
     },[])
-
-    console.log('test',roomSelected);
     
 
     // const roomDetailToRender = () => 

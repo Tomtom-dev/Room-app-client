@@ -20,12 +20,10 @@ export default function Login() {
     const history = useHistory();
 
     function submitForm (event){
-        console.log('hi');
-        
+       
         event.preventDefault();
         dispatch(login(email,password))
-        console.log(email, password);
-
+      
         setEmail("");
         setPassword("");
     }

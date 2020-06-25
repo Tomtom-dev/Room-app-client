@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
 import { useSelector } from "react-redux";
-import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps"
+import {GoogleMap, useLoadScript, Marker, InfoWindow} from "@react-google-maps/api"
 import {selectRoomDetails} from '../store/roomPageDetail/selector'
+import mapStyles from "./mapStyles"
+import {formatRelative} from 'date-fns'
 
 
 export default function RoomPageCardDetail(props) {
@@ -11,29 +13,36 @@ export default function RoomPageCardDetail(props) {
     const adressForRoom = useSelector(selectRoomDetails).location
 
     console.log('please give me the room adress great sir', adressForRoom);
-    
 
-    function Map(){
+    const [markers, setMarkers] = useState([])
 
-        // const [selectedAdress, setSelectedAdress] = useState(null);
-
-        return <GoogleMap
-        defaultZoom={10} 
-        defaultCenter={{lat:52.370216, lng:4.895168}}
-        >
-             {<Marker name={adressForRoom}/>}
-
-             {/* {adressForRoom && (
-                <InfoWindow>
-                      <div>Adress Details</div> 
-                </InfoWindow>
-             )} */}
-        </GoogleMap>
+    const REACT_APP_GOOGLE_MAPS_API_KEY="AIzaSyDaBw7bLrb_TtZx2Ei2os4dSvQJ85nRW9c"
+    const libraries= ["places"];
+    const mapContainerStyle={
+        width:"100vw",
+        height:"100vh"
+    }
+    const center = {
+        lat:52.370216,
+        lng:4.895168
     }
 
-    const REACT_APP_GOOGLE_KEY="AIzaSyCOIipQiXJJ3OQQwpHd2ftdpk76djROv9I"
+    const options={
+        styles:mapStyles,
+        diiisableDefaultUI: true,
+        zoomControl: true
+    }
+    
+    const {isLoaded, loadError}= useLoadScript({
+        googleMapsApiKey: REACT_APP_GOOGLE_MAPS_API_KEY,
+        libraries,
+    })
 
-    const WrappedMap = withScriptjs(withGoogleMap(Map))
+    if (loadError) return "Error loading maps";
+    if (!isLoaded) return "Loading Maps";
+    
+
+    
 
     return (
         <div>
@@ -45,14 +54,16 @@ export default function RoomPageCardDetail(props) {
                     <p>{location}</p>
                     <p>{description}</p>
                 </div> 
-                <div style={{width:"100vw", height:"100vh"}}>
-                    <WrappedMap 
-                    googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&
-                    libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-                    loadingElement={<div style={{height: "100%"}}/>}
-                    containerElement={<div style={{height: "100%"}}/>}
-                    mapElement={<div style={{height: "100%"}}/>}
-                    />
+                <div>
+                    <h3>Room </h3>
+                    <GoogleMap 
+                    mapContainerStyle={mapContainerStyle} 
+                    zoom={8} 
+                    center={center}
+                    options={options}
+                    onClick={(event)=>{setMarkers()}
+                    }
+                    ></GoogleMap>
                 </div>
             </section>
         </div>
