@@ -37,17 +37,18 @@ export default function RoomPageCardDetail(props) {
         }
       );
 
+    // set proprieties for google map
     const libraries= ["places"];
     const mapContainerStyle={
-        width:"750px",
-        height:"350px",
-        margin:"auto"
+        width:"50em",
+        height:"22em",
+        margin:"auto",
+        marginBottom: "1em",
     }
     const center = {
         lat:lat,
         lng:lng
     }
-
     const options={
         styles:mapStyles,
         diiisableDefaultUI: true,
@@ -84,15 +85,15 @@ export default function RoomPageCardDetail(props) {
                     center={center}
                     options={options}
                     >
-
                         <Marker 
                         position={
                             {lat:lat,
                             lng:lng}
                         }/>
-
                     </GoogleMap>
                 </div>
+                <button id="btn-react">React to the post</button>
+
             </section>
         </div>
     )
