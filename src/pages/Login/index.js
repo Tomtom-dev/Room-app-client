@@ -22,7 +22,7 @@ export default function Login() {
     function submitForm (event){
        
         event.preventDefault();
-        dispatch(login(email,password))
+        dispatch(login(email,password,history))
       
         setEmail("");
         setPassword("");

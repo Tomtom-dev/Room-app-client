@@ -15,14 +15,18 @@ export default function RoomPageCardDetail(props) {
     const [lng, setLng] = useState([])
     const [lat, setLat] = useState([])
 
-    const REACT_APP_GOOGLE_MAPS_API_KEY="AIzaSyDaBw7bLrb_TtZx2Ei2os4dSvQJ85nRW9c"
+    
 
     // get the adress
     const adressForRoom = useSelector(selectRoomDetails).location
 
-    //transform the adress to latitude and longitude with geocoding
+    //transform the adress to latitude and longitude with 
 
-    Geocode.setApiKey(REACT_APP_GOOGLE_MAPS_API_KEY);
+   
+    
+    
+
+    Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
     Geocode.setLanguage("en")
     Geocode.fromAddress(adressForRoom).then(
         response => {
@@ -56,7 +60,7 @@ export default function RoomPageCardDetail(props) {
     }
     
     const {isLoaded, loadError}= useLoadScript({
-        googleMapsApiKey: REACT_APP_GOOGLE_MAPS_API_KEY,
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries,
     })
 

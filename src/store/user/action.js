@@ -35,7 +35,7 @@ const loginSuccess = userWithToken => {
     };
   };
 
-  export const login = (email,password) =>{
+  export const login = (email,password,history) =>{
       return async (dispatch,getState)=>{
         try {
            const response = await axios.post(`http://localhost:4000/login`,{
@@ -44,6 +44,7 @@ const loginSuccess = userWithToken => {
            })
 
            dispatch(loginSuccess(response.data))
+           history.push("/announce")
            dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));
       } catch (error){
         if(error.response){
