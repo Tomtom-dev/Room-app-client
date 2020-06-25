@@ -1,0 +1,15 @@
+#img-presentation{
+    width: 750px;
+    height: 450px;
+    margin:auto;
+}
+
+.formRoomDetail{
+    padding: 1em;
+    margin: 1em;
+    width: 850px;
+    border: 2px solid #d3d3d3;
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+}
