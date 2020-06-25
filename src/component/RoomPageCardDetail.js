@@ -7,24 +7,16 @@ import mapStyles from "./mapStyles"
 import {formatRelative} from 'date-fns'
 import './RoomPageCardDetail.css'
 
-
 export default function RoomPageCardDetail(props) {
 
     const{title,image,description,location,id}= props
-
     const [lng, setLng] = useState([])
     const [lat, setLat] = useState([])
-
-    
 
     // get the adress
     const adressForRoom = useSelector(selectRoomDetails).location
 
     //transform the adress to latitude and longitude with 
-
-   
-    
-    
 
     Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
     Geocode.setLanguage("en")
@@ -34,7 +26,6 @@ export default function RoomPageCardDetail(props) {
           console.log(lat, lng);
           setLng(lng)
           setLat(lat)
-
         },
         error => {
           console.error(error);
@@ -58,7 +49,6 @@ export default function RoomPageCardDetail(props) {
         diiisableDefaultUI: true,
         zoomControl: true
     }
-    
     const {isLoaded, loadError}= useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries,
@@ -67,9 +57,6 @@ export default function RoomPageCardDetail(props) {
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
     
-
-    
-
     return (
         <div>
             <h2>Offer Details</h2>

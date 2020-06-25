@@ -11,13 +11,14 @@ export default function SignUp() {
     const [password, setPassword] = useState("");
     const [age, setAge] = useState("")
     const dispatch = useDispatch();
+    const history = useHistory();
 
     function submitForm(event){
         event.preventDefault();
 
         console.log(name,email,password,age);
         
-        dispatch(signUp(name,email,password,age))
+        dispatch(signUp(name,email,password,age,history))
         setEmail("");
         setPassword("");
         setName("");

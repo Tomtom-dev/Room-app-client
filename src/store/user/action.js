@@ -61,7 +61,7 @@ const loginSuccess = userWithToken => {
 
 export const logOut = () => ({ type: "LOG_OUT" });
 
-export const signUp = (name, email, password,age) => {
+export const signUp = (name, email, password,age,history) => {
   return async (dispatch, getState) => {
     
     try {
@@ -69,10 +69,11 @@ export const signUp = (name, email, password,age) => {
         name,
         email,
         password,
+        history,
         age
       });
       console.log('search',response);
-      
+      history.push("/announce")
       dispatch(loginSuccess(response.data));
       dispatch(showMessageWithTimeout("success", true, "account created"));
       ;
