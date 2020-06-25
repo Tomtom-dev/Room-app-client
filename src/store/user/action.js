@@ -58,6 +58,8 @@ const loginSuccess = userWithToken => {
   }
 }
 
+export const logOut = () => ({ type: "LOG_OUT" });
+
 export const signUp = (name, email, password,age) => {
   return async (dispatch, getState) => {
     
