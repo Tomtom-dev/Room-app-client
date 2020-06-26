@@ -1,1 +1,1 @@
-export const getRoomPage = state => state.rooms
+export const getRoomPage = state => state.roomsReducer.list
