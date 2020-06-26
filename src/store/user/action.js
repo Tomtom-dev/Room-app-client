@@ -35,7 +35,7 @@ const loginSuccess = userWithToken => {
     };
   };
 
-  export const login = (email,password) =>{
+  export const login = (email,password,history) =>{
       return async (dispatch,getState)=>{
         try {
            const response = await axios.post(`http://localhost:4000/login`,{
@@ -44,6 +44,7 @@ const loginSuccess = userWithToken => {
            })
 
            dispatch(loginSuccess(response.data))
+           history.push("/announce")
            dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));
       } catch (error){
         if(error.response){
@@ -58,7 +59,9 @@ const loginSuccess = userWithToken => {
   }
 }
 
-export const signUp = (name, email, password,age) => {
+export const logOut = () => ({ type: "LOG_OUT" });
+
+export const signUp = (name, email, password,age,history) => {
   return async (dispatch, getState) => {
     
     try {
@@ -66,10 +69,11 @@ export const signUp = (name, email, password,age) => {
         name,
         email,
         password,
+        history,
         age
       });
       console.log('search',response);
-      
+      history.push("/announce")
       dispatch(loginSuccess(response.data));
       dispatch(showMessageWithTimeout("success", true, "account created"));
       ;

@@ -1,25 +1,79 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Container, Button, Form, Input,FormGroup} from 'reactstrap'
+// import { selectRoomDetails } from '../../store/roomPageDetail/selector'
+import {createNewPost} from '../../store/roomPageDetail/action'
+import { useDispatch, useSelector } from "react-redux";
+import {selectUserId} from '../../store/user/selector'
+import { useHistory } from "react-router-dom";
 
 
 export default function PostAnnounce() {
+
+    const [title, setTitle] = useState("")
+    const [location, setLocation] = useState("")
+    const [description, setDescription] = useState("")
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const userId = useSelector(selectUserId)
+
+    // add the image with cloudinary
+    const [loading, setLoading] = useState(false)
+    const [image, setImage] = useState("")
+
+   const uploadImage = async event =>{
+       const files= event.target.files
+       const data = new FormData()
+       data.append('file', files[0])
+       data.append('upload_preset','geekyimages')
+       setLoading(true)
+
+       const res = await fetch("https://api.cloudinary.com/v1_1/djstug8i6/image/upload",
+       {
+            method:'POST',
+            body:data
+       })
+
+       const file =await res.json()
+       setImage(file.secure_url)
+       setLoading(false)
+   }
+    
+
+    function submitForm (event){
+        event.preventDefault();
+        console.log("submit the new post")
+        console.log(title, location, description, userId, image)
+
+        dispatch(createNewPost({title, location, description, image, history}))
+
+        setTitle("")
+        setLocation("")
+        setDescription("")
+        setImage("")
+    }
+
     return (
         <div>
             <Container >
                 <Form className="form-size contain">
                     <h1>Post a room</h1>
                     <FormGroup>
-                        <Input type='text' placeholder="title" ></Input>
+                        <Input type='text' placeholder="title"
+                         value={title} onChange={event => setTitle(event.target.value)}></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Input type='text' placeholder="location"></Input>
+                        <Input type='text' placeholder="location"
+                         value={location} onChange={event => setLocation(event.target.value)}></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Input type="textarea" rows="7" name="text" placeholder="description" />
+                        <Input type="textarea" rows="7" name="text"
+                         placeholder="description" value={description} onChange={event => setDescription(event.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                    <Input type="file" name="file" id="exampleFile" />
-                    <Button color="primary"  type="submit" onClick={()=>{}}>Post</Button>
+                    {loading?(<h3>Loading ...</h3>):(<img src={image} alt="selected" id="img-preview" style={{maxWidth:'350px'}}/>)}
+                    <Input type="file" name="file" id="file-upload"  onChange={uploadImage}/>
+                    <Button color="primary"  type="submit" onClick={submitForm}>Post</Button>
                     </FormGroup>
                 </Form>
                 

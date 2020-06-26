@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import{Container,Button, Form, Label, Input, FormGroup} from 'reactstrap'
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import {signUp} from '../../store/user/action'
 
 export default function SignUp() {
@@ -11,13 +11,14 @@ export default function SignUp() {
     const [password, setPassword] = useState("");
     const [age, setAge] = useState("")
     const dispatch = useDispatch();
+    const history = useHistory();
 
     function submitForm(event){
         event.preventDefault();
 
         console.log(name,email,password,age);
         
-        dispatch(signUp(name,email,password,age))
+        dispatch(signUp(name,email,password,age,history))
         setEmail("");
         setPassword("");
         setName("");

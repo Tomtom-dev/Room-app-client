@@ -6,7 +6,7 @@ import './index.css'
 
 export default function Homepage() {
     
-    const videosource="https://www.youtube.com/embed/r2-XL3P_ZNE?controls=0&showinfo=01&rel=0&autoplay=1&loop=1&playlist=r2-XL3P_ZNE&mute=1"
+    const videosource="https://www.youtube.com/embed/BCYKK_2HeEY?controls=0&showinfo=01&rel=0&autoplay=1&loop=1&playlist=BCYKK_2HeEY&mute=1"
 
     return(
         <header>
@@ -21,15 +21,10 @@ export default function Homepage() {
             </div>
             <div className="header-overlay"></div>
             <div className="header-content">
-                <h1>hello Everyone</h1>
-                <p>Non etiam tempor id arcu magna ante eget. 
-                    Nec per posuere cubilia cras porttitor condimentum
-                    orci suscipit. Leo maecenas in tristique,
-                     himenaeos elementum placerat.
-                    Taciti rutrum nostra,
-                    eget cursus velit ultricies. Quam molestie tellus himenaeos
-                     cubilia congue vivamus ultricies.
-                    Interdum praesent ut penatibus fames eros ad consectetur sed.</p>
+                <h1>Homeshare</h1>
+                <p>Where we match students in need for a low-cost accommodation with an older person with a spare room.
+
+There are a lot of benefits to both the Householder and Homesharer .</p>
 
                 <Link to="/rooms">
                     <button className="myButton">see the Rooms</button>
