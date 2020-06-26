@@ -22,11 +22,9 @@ export default function Homepage() {
             <div className="header-overlay"></div>
             <div className="header-content">
                 <h1>Homeshare</h1>
-                <p>Often there are elderly who need a helping hand around the house or feel lonely at times.
+                <p>Where we match students in need for a low-cost accommodation with an older person with a spare room.
 
-Studies have shown  that social isolation and loneliness of elderly people often leads to mental decline and mortality.
-
-While on the other hand there is a huge housing problem for students that study in big cities.</p>
+There are a lot of benefits to both the Householder and Homesharer .</p>
 
                 <Link to="/rooms">
                     <button className="myButton">see the Rooms</button>
