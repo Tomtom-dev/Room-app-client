@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Container, Button, Form, Input,FormGroup} from 'reactstrap'
-import { selectRoomDetails } from '../../store/roomPageDetail/selector'
+// import { selectRoomDetails } from '../../store/roomPageDetail/selector'
 import {createNewPost} from '../../store/roomPageDetail/action'
 import { useDispatch, useSelector } from "react-redux";
 import {selectUserId} from '../../store/user/selector'
@@ -71,7 +71,7 @@ export default function PostAnnounce() {
                          placeholder="description" value={description} onChange={event => setDescription(event.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                    {loading?(<h3>Loading ...</h3>):(<img src={image} id="img-preview" style={{maxWidth:'350px'}}/>)}
+                    {loading?(<h3>Loading ...</h3>):(<img src={image} alt="selected" id="img-preview" style={{maxWidth:'350px'}}/>)}
                     <Input type="file" name="file" id="file-upload"  onChange={uploadImage}/>
                     <Button color="primary"  type="submit" onClick={submitForm}>Post</Button>
                     </FormGroup>

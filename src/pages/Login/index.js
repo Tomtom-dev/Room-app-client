@@ -2,10 +2,10 @@ import React,{useState} from 'react'
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch} from "react-redux";
 import { Link,useHistory } from "react-router-dom";
 import {login} from "../../store/user/action"
-import { selectToken } from "../../store/user/selector";
+// import { selectToken } from "../../store/user/selector";
 // import {selectUserName} from "../../store/user/selector";
 // import {selectUserEmail} from "../../store/user/selector";
 import "./Login.css"
@@ -13,7 +13,7 @@ import "./Login.css"
 export default function Login() {
 
     const dispatch = useDispatch();
-    const token = useSelector(selectToken);
+    // const token = useSelector(selectToken);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

@@ -1,15 +1,15 @@
 import React,{useState} from 'react'
 import { useSelector } from "react-redux";
 import Geocode from "react-geocode"
-import {GoogleMap, useLoadScript, Marker, InfoWindow, Autocomplete} from "@react-google-maps/api"
+import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api"
 import {selectRoomDetails} from '../store/roomPageDetail/selector'
 import mapStyles from "./mapStyles"
-import {formatRelative} from 'date-fns'
+// import {formatRelative} from 'date-fns'
 import './RoomPageCardDetail.css'
 
 export default function RoomPageCardDetail(props) {
 
-    const{title,image,description,location,id}= props
+    const{title,image,description,location}= props
     const [lng, setLng] = useState([])
     const [lat, setLat] = useState([])
 

@@ -4,7 +4,7 @@ import {fetchRoomById} from '../store/roomPageDetail/action'
 import {useParams} from 'react-router-dom'
 import {selectRoomDetails} from '../store/roomPageDetail/selector'
 import RoomPageCardDetail from '../component/RoomPageCardDetail'
-// import {} from ''
+
 
 export default function RoomPageDetail() {
 

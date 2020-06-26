@@ -21,15 +21,12 @@ export default function Homepage() {
             </div>
             <div className="header-overlay"></div>
             <div className="header-content">
-                <h1>hello Everyone</h1>
-                <p>Non etiam tempor id arcu magna ante eget. 
-                    Nec per posuere cubilia cras porttitor condimentum
-                    orci suscipit. Leo maecenas in tristique,
-                     himenaeos elementum placerat.
-                    Taciti rutrum nostra,
-                    eget cursus velit ultricies. Quam molestie tellus himenaeos
-                     cubilia congue vivamus ultricies.
-                    Interdum praesent ut penatibus fames eros ad consectetur sed.</p>
+                <h1>Homeshare</h1>
+                <p>Often there are elderly who need a helping hand around the house or feel lonely at times.
+
+Studies have shown  that social isolation and loneliness of elderly people often leads to mental decline and mortality.
+
+While on the other hand there is a huge housing problem for students that study in big cities.</p>
 
                 <Link to="/rooms">
                     <button className="myButton">see the Rooms</button>

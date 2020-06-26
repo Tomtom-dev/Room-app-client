@@ -11,8 +11,6 @@ export default function Rooms() {
 
   const [place, setPlace] = useState([])
 
-  console.log("theroompage", roomPages);
-
   useEffect(() => {
     dispatch(fetchRooms());
   }, []);
@@ -29,21 +27,22 @@ export default function Rooms() {
 
   //get the current value of the slider
 
-  const currentLocation = (event) =>{
-      const locationChoose= (event.target.value)
-      setPlace(locationChoose)
-  }
+  // const currentLocation = (event) =>{
+  //     const locationChoose= (event.target.value)
+  //     setPlace(locationChoose)
+  // }
 
   // Filter with the sliders
 
-  let filteredRooms = roomPages.filter(room=>{
-      const matchRoom = room.location === place
-      if(matchRoom){
-          return true
-      }else{
-          return false
-      }
-  })
+  // let filteredRooms = roomPages.filter(room=>{
+  //     const matchRoom = room.location === place
+  //     if(matchRoom){
+  //         return true
+  //     }else{
+  //         return false
+  //     }
+  // })
+
 
   const roomsToRender = () =>
     roomPages.map((room) => <RoomPageCard key={room.id} {...room} />);
@@ -52,7 +51,7 @@ export default function Rooms() {
     <div>
       <h1>Rooms</h1>
         <form style={{width:"15em", marginLeft:"24em", marginBottom:"2em", margin:'auto'}}>
-             <Select options={arrayOfLocation} onChange={currentLocation}/>
+             <Select options={arrayOfLocation} onChange={""}/>
         </form>
       
 
