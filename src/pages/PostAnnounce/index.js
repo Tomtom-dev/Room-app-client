@@ -4,6 +4,7 @@ import { selectRoomDetails } from '../../store/roomPageDetail/selector'
 import {createNewPost} from '../../store/roomPageDetail/action'
 import { useDispatch, useSelector } from "react-redux";
 import {selectUserId} from '../../store/user/selector'
+import { useHistory } from "react-router-dom";
 
 
 export default function PostAnnounce() {
@@ -12,6 +13,7 @@ export default function PostAnnounce() {
     const [location, setLocation] = useState("")
     const [description, setDescription] = useState("")
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const userId = useSelector(selectUserId)
 
@@ -43,7 +45,7 @@ export default function PostAnnounce() {
         console.log("submit the new post")
         console.log(title, location, description, userId, image)
 
-        dispatch(createNewPost({title, location, description, image}))
+        dispatch(createNewPost({title, location, description, image, history}))
 
         setTitle("")
         setLocation("")
