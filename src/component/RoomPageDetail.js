@@ -16,7 +16,7 @@ export default function RoomPageDetail() {
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(fetchRoomById(id))
-    },[])
+    },[dispatch,id])
     
 
     // const roomDetailToRender = () => 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRooms } from "../../store/roomPage/action";
 import { getRoomPage } from "../../store/roomPage/selector";
@@ -9,11 +9,11 @@ export default function Rooms() {
   const roomPages = useSelector(getRoomPage);
   const dispatch = useDispatch();
 
-  const [place, setPlace] = useState([])
+  // const [place, setPlace] = useState([])
 
   useEffect(() => {
     dispatch(fetchRooms());
-  }, []);
+  }, [dispatch]);
 
   //get array of location 
 
