@@ -17,7 +17,7 @@ export default function Navbar (){
                     <NavLink to="/homepage" className="button" >Home</NavLink>
                     <NavLink to="/rooms" className="button">Rooms</NavLink>
                     {age?(<NavLink to="/announce" className="button">Post a room</NavLink>):
-                    console.log('hello')}
+                    (null)}
                     {age?(<NavLink to="/homepage" onClick={() => dispatch(logOut())}>Log Out</NavLink>):
                     (<NavLink to="/login" className="button">Login</NavLink>)}
                 </ul>
