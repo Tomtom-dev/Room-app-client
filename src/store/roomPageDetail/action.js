@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-
 const ROOM_DETAIL_FETCHED = "ROOM_DETAIL_FETCHED";
 const NEW_ROOM = "NEW_ROOM"
 
@@ -13,6 +12,8 @@ const addNewRoom = newRoom => ({
     type: NEW_ROOM,
     payload: newRoom
 })
+
+
 
 
 export const createNewPost =(newPost)=> async (dispatch, getState)=>{
@@ -44,3 +45,4 @@ export const fetchRoomById = id => {
         dispatch(roomPageDetail(response.data))
     }
 }
+
