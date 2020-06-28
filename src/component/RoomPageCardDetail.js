@@ -5,13 +5,17 @@ import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api"
 import {selectRoomDetails} from '../store/roomPageDetail/selector'
 import mapStyles from "./mapStyles"
 // import {formatRelative} from 'date-fns'
+import ReactToRoom from './ReactToRoom'
 import './RoomPageCardDetail.css'
+
 
 export default function RoomPageCardDetail(props) {
 
     const{title,image,description,location}= props
     const [lng, setLng] = useState([])
     const [lat, setLat] = useState([])
+
+    const [editPost, seteditPost] = useState(false)
 
     // get the adress
     const adressForRoom = useSelector(selectRoomDetails).location
@@ -83,8 +87,9 @@ export default function RoomPageCardDetail(props) {
                         }/>
                     </GoogleMap>
                 </div>
-                <button id="btn-react">React to the post</button>
-
+                
+                <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
+                {editPost ? (<ReactToRoom/>):(null)}
             </section>
         </div>
     )
