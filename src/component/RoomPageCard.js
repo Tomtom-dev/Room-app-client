@@ -20,7 +20,9 @@ export default function RoomPageCard(props) {
                     <p>City : {location}</p>
                     {age?(<Link to={`rooms/${id}`}>
                         <button>See more</button>
-                    </Link>) : <p>Log in to see more</p>}
+                    </Link>) : <Link to={`login/`}>
+                    <p>Log in to see more</p>
+                    </Link>}
                     
                 </div>
             </section>
