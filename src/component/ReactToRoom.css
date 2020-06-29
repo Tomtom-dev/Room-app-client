@@ -1,0 +1,11 @@
+.formMessageDetail{
+    padding: 1em;
+    margin: 1em;
+    margin-top: 2em;
+    width: 60em;
+    border: 2px solid #d3d3d3;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+}

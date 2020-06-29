@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 const ROOM_DETAIL_FETCHED = "ROOM_DETAIL_FETCHED";
 const NEW_ROOM = "NEW_ROOM"
 
@@ -38,7 +39,8 @@ export const createNewPost =(newPost)=> async (dispatch, getState)=>{
 }
 
 
-export const fetchRoomById = id => {
+export const fetchRoomById = (id)=> {
+    
     
     return async (dispatch, getState)=>{
         const response =await axios.get(`http://localhost:4000/room/${id}`)

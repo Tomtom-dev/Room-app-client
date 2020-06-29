@@ -1,8 +1,9 @@
-import React,{useState} from 'react'
-import { useSelector } from "react-redux";
+import React,{useState,useEffect} from 'react'
+import { useSelector,useDispatch } from "react-redux";
 import Geocode from "react-geocode"
 import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api"
 import {selectRoomDetails} from '../store/roomPageDetail/selector'
+import {getAllMessages} from '../store/room_respond/action'
 import mapStyles from "./mapStyles"
 // import {formatRelative} from 'date-fns'
 import ReactToRoom from './ReactToRoom'
@@ -16,7 +17,13 @@ export default function RoomPageCardDetail(props) {
     const [lng, setLng] = useState([])
     const [lat, setLat] = useState([])
 
+    const dispatch = useDispatch();
+
     const [editPost, seteditPost] = useState(false)
+
+    useEffect(() => {
+       dispatch(getAllMessages())
+    }, [dispatch])
 
     // get the adress
     const adressForRoom = useSelector(selectRoomDetails).location
@@ -64,9 +71,7 @@ export default function RoomPageCardDetail(props) {
     
     return (
         <div>
-            <h2>Offer Details</h2>
             <section className="formRoomDetail">  
-                
                     <img src={image} alt={"the pic"} id="img-presentation"/>
                     
                     <div>
@@ -92,6 +97,7 @@ export default function RoomPageCardDetail(props) {
                     <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
                     {editPost ? (<ReactToRoom/>):(null)}
             </section>
+            <h4 style={{ marginRight:"28em"}}>Message</h4>
             <RoomMessage/>
         </div>
     )
