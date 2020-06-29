@@ -23,7 +23,6 @@ export default function RoomPageCard(props) {
                     </Link>) : <Link to={`login/`}>
                     <p>Log in to see more</p>
                     </Link>}
-                    
                 </div>
             </section>
         </div>
