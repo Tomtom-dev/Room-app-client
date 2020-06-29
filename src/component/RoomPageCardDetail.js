@@ -35,7 +35,6 @@ export default function RoomPageCardDetail(props) {
     Geocode.fromAddress(adressForRoom).then(
         response => {
           const { lat, lng } = response.results[0].geometry.location;
-          console.log(lat, lng);
           setLng(lng)
           setLat(lat)
         },

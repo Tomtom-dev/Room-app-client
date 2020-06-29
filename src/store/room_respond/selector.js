@@ -1,0 +1,1 @@
+export const getRoomRespond = state => state.roomRespond.messages

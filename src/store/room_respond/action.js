@@ -1,8 +1,5 @@
 import axios from 'axios'
-import { InputGroupText } from 'reactstrap'
-import { useSelector } from "react-redux";
-import {selectRoomDetails} from "../roomPageDetail/selector"
-import { fetchRoomById } from '../roomPageDetail/action';
+
 
 const NEW_MESSAGE="NEW_MESSAGE"
 const ALL_MESSAGE= "ALL_MESSAGE"
