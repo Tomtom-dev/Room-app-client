@@ -8,7 +8,7 @@ export const saveRooms = rooms =>({
 
 export const fetchRooms =() => async (dispatch, getState) =>{
     try{
-        const response = await axios.get("http://localhost:4000/")
+        const response = await axios.get("http://localhost:4000/room")
         dispatch(saveRooms(response.data))
         
         

@@ -6,6 +6,7 @@ import {selectRoomDetails} from '../store/roomPageDetail/selector'
 import mapStyles from "./mapStyles"
 // import {formatRelative} from 'date-fns'
 import ReactToRoom from './ReactToRoom'
+import RoomMessage from './RoomMessage'
 import './RoomPageCardDetail.css'
 
 
@@ -66,31 +67,32 @@ export default function RoomPageCardDetail(props) {
             <h2>Offer Details</h2>
             <section className="formRoomDetail">  
                 
-                <img src={image} alt={"the pic"} id="img-presentation"/>
-                
-                <div>
-                    <h3>{title}</h3>
-                    <p>{location}</p>
-                    <p>{description}</p>
-                </div> 
-                <div>
-                    <GoogleMap 
-                    mapContainerStyle={mapContainerStyle} 
-                    zoom={12} 
-                    center={center}
-                    options={options}
-                    >
+                    <img src={image} alt={"the pic"} id="img-presentation"/>
+                    
+                    <div>
+                        <h3>{title}</h3>
+                        <p>{location}</p>
+                        <p>{description}</p>
+                    </div> 
+                    <div>
+                        <GoogleMap 
+                        mapContainerStyle={mapContainerStyle} 
+                        zoom={12} 
+                        center={center}
+                        options={options}
+                        >
                         <Marker 
                         position={
                             {lat:lat,
                             lng:lng}
                         }/>
-                    </GoogleMap>
-                </div>
-                
-                <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
-                {editPost ? (<ReactToRoom/>):(null)}
+                        </GoogleMap>
+                    </div>
+                    
+                    <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
+                    {editPost ? (<ReactToRoom/>):(null)}
             </section>
+            <RoomMessage/>
         </div>
     )
 }

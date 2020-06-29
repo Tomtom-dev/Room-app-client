@@ -23,7 +23,7 @@ export const createNewPost =(newPost)=> async (dispatch, getState)=>{
 
         const {title, location, description, image,history}= newPost
 
-        const response = await axios.post(`http://localhost:4000/`,{
+        const response = await axios.post(`http://localhost:4000/room`,{
             title,
             location,
             description,
@@ -41,7 +41,7 @@ export const createNewPost =(newPost)=> async (dispatch, getState)=>{
 export const fetchRoomById = id => {
     
     return async (dispatch, getState)=>{
-        const response =await axios.get(`http://localhost:4000/${id}`)
+        const response =await axios.get(`http://localhost:4000/room/${id}`)
         dispatch(roomPageDetail(response.data))
     }
 }
