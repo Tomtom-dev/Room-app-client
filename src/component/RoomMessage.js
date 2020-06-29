@@ -1,19 +1,15 @@
 import React from 'react'
-import { useSelector } from "react-redux";
-import {getRoomRespond} from "../store/room_respond/selector"
 import "./ReactToRoom.css"
 
-export default function RoomMessage() {
+export default function RoomMessage(props) {
 
-    const roomRespondMessages= useSelector(getRoomRespond)
+    const{message}=props
 
-    console.log('give me the messages',roomRespondMessages);
-    
     
 
     return (
         <div className="formMessageDetail">
-            <p>Message here</p>
+            <p style={{textAlign:"left"}}>{message}</p>
         </div>
     )
 }

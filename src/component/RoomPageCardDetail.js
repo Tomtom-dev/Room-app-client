@@ -3,6 +3,7 @@ import { useSelector,useDispatch } from "react-redux";
 import Geocode from "react-geocode"
 import {GoogleMap, useLoadScript, Marker} from "@react-google-maps/api"
 import {selectRoomDetails} from '../store/roomPageDetail/selector'
+import {getRoomRespond} from "../store/room_respond/selector"
 import {getAllMessages} from '../store/room_respond/action'
 import mapStyles from "./mapStyles"
 // import {formatRelative} from 'date-fns'
@@ -26,7 +27,9 @@ export default function RoomPageCardDetail(props) {
     }, [dispatch])
 
     // get the adress
+    const roomRespondMessages= useSelector(getRoomRespond)
     const adressForRoom = useSelector(selectRoomDetails).location
+
 
     //transform the adress to latitude and longitude with 
 
@@ -67,6 +70,11 @@ export default function RoomPageCardDetail(props) {
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
+
+    
+
+    const messageToRender= () => 
+        roomRespondMessages.map((message)=><RoomMessage key={message.id} {...message}/> );
     
     return (
         <div>
@@ -97,7 +105,7 @@ export default function RoomPageCardDetail(props) {
                     {editPost ? (<ReactToRoom/>):(null)}
             </section>
             <h4 style={{ marginRight:"28em"}}>Message</h4>
-            <RoomMessage/>
+            {messageToRender()}
         </div>
     )
 }
