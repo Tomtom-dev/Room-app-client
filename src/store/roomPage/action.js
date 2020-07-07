@@ -8,7 +8,7 @@ export const saveRooms = rooms =>({
 
 export const fetchRooms =() => async (dispatch, getState) =>{
     try{
-        const response = await axios.get("http://localhost:4000/room")
+        const response = await axios.get("https://room-for-help.herokuapp.com/room")
         dispatch(saveRooms(response.data))
         
         

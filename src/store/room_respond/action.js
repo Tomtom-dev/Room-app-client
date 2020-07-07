@@ -27,7 +27,7 @@ export const createNewMessage = (newMessage) =>async (dispatch,getState)=>{
 
         const {message}= newMessage;
 
-        const response=  await axios.post('http://localhost:4000/roomrespond',{
+        const response=  await axios.post('https://room-for-help.herokuapp.com/roomrespond',{
             message,
             userId,
             roomId
@@ -43,7 +43,7 @@ export const getAllMessages = () => async (dispatch, getState) =>{
         const id = getState().roomPageDetailReducer.roomSelected.id
         console.log('logue', id);
         
-        const response = await axios.get(`http://localhost:4000/roomrespond/${id}`)
+        const response = await axios.get(`https://room-for-help.herokuapp.com/roomrespond/${id}`)
         
         dispatch(showAllMessages(response.data))
     }catch(error){

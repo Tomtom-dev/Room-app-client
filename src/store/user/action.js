@@ -38,7 +38,7 @@ const loginSuccess = userWithToken => {
   export const login = (email,password,history) =>{
       return async (dispatch,getState)=>{
         try {
-           const response = await axios.post(`http://localhost:4000/login`,{
+           const response = await axios.post(`https://room-for-help.herokuapp.com/login`,{
                email,
                password
            })
@@ -65,7 +65,7 @@ export const signUp = (name, email, password,age,history) => {
   return async (dispatch, getState) => {
     
     try {
-      const response = await axios.post(`http://localhost:4000/signup`, {
+      const response = await axios.post(`https://room-for-help.herokuapp.com/signup`, {
         name,
         email,
         password,
