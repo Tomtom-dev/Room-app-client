@@ -18,7 +18,7 @@ export default function RoomPageCardDetail(props) {
     const [lng, setLng] = useState([])
     const [lat, setLat] = useState([])
 
-    const REACT_APP_GOOGLE_MAPS_API_KEY ="AIzaSyDaBw7bLrb_TtZx2Ei2os4dSvQJ85nRW9c"
+    const REACT_APP_GOOGLE_MAPS_API_KEY ="AIzaSyDsD6lQJeHlSq_uWE01BY6eCNunqO8oAEE"
 
     const dispatch = useDispatch();
 
