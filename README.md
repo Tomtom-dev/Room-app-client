@@ -11,9 +11,16 @@ In big cities, lot of senior live alone in a big space and have difficulty to ma
 
 ## Table of content
 
-### App demo
+- [App-demo](#App-demo)
+- [Technology used](#technology-used)
+- [Goals for this project](#goals-for-this-project)
+- [User Stories and Wireframe](#user-stories-and-wireframe)
+- [Git workflow](#git-workflow)
+- [Server-repository](#server-repo)
 
-### technologies
+### App-demo
+
+### Technology used
 
 -[React](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/App.js)
 -[Redux](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/store/roomPage/action.js)
@@ -25,9 +32,9 @@ In big cities, lot of senior live alone in a big space and have difficulty to ma
 -[Google Geocoding API](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/component/RoomPageCardDetail.js)
 -[Cloudinary](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/pages/PostAnnounce/index.js)
 
-### Goal for this project
+### Goals for this project
 
-## Wireframe and UserStories
+## User Stories and Wireframe
 
 ### User stories for this project:
 
@@ -47,7 +54,7 @@ In big cities, lot of senior live alone in a big space and have difficulty to ma
 
 [click here to see the wireframe](https://wireframepro.mockflow.com/editor.jsp?editor=on&bgcolor=white&perm=Create&ptitle=Portfolio%20App&category=featured&projectid=Md8fc63123fc0da370280f99fa027f4071592222135679&publicid=f83ea140cf554feea52654b01de1e31e#/page/D20050a444d377808df33f7f5fc26331c)
 
-### Server repository
+### Server-repository
 
 https://github.com/Tomtom-dev/Room-app-server
 
