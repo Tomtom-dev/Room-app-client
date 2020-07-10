@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 :older_woman: :older_man: Room-for-help App :woman: :man:
 
+
 ## what this app is about
 
 :point_right: :point_right:  [the deployed version](https://room-for-help.netlify.app) :point_left: :point_left:
@@ -22,15 +23,15 @@ In big cities, lot of senior live alone in a big space and have difficulty to ma
 
 ### Technology used
 
--[React](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/App.js)
--[Redux](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/store/roomPage/action.js)
--[Express](https://github.com/Tomtom-dev/Room-app-server/blob/development/index.js)
--[Rest API](https://github.com/Tomtom-dev/Room-app-server/tree/development/routers)
--[Sequelize](https://github.com/Tomtom-dev/Room-app-server/blob/development/models/room.js)
--[React-Bootstrap](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/pages/Login/index.js)
--[Google Map Javascript API](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/component/RoomPageCardDetail.js)
--[Google Geocoding API](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/component/RoomPageCardDetail.js)
--[Cloudinary](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/pages/PostAnnounce/index.js)
+- [React](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/App.js)
+- [Redux](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/store/roomPage/action.js)
+- [Express](https://github.com/Tomtom-dev/Room-app-server/blob/development/index.js)
+- [Rest API](https://github.com/Tomtom-dev/Room-app-server/tree/development/routers)
+- [Sequelize](https://github.com/Tomtom-dev/Room-app-server/blob/development/models/room.js)
+- [React-Bootstrap](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/pages/Login/index.js)
+- [Google Map Javascript API](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/component/RoomPageCardDetail.js)
+- [Google Geocoding API](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/component/RoomPageCardDetail.js)
+- [Cloudinary](https://github.com/Tomtom-dev/Room-app-client/blob/development/src/pages/PostAnnounce/index.js)
 
 ### Goals for this project
 

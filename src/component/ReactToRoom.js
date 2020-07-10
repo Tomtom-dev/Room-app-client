@@ -12,9 +12,9 @@ export default function ReactToRoom() {
     function submitForm(event){
         event.preventDefault();
         console.log("submit new post");
-        console.log(title,message);
+        console.log(message);
         
-        dispatch(createNewMessage({title,message}))
+        dispatch(createNewMessage({message}))
 
         setTitle("")
         setMessage("")
@@ -23,13 +23,7 @@ export default function ReactToRoom() {
 
     return (
         <div>
-            <Container > 
-                <Form className="form-size contain">
-                <FormGroup>
-                        <Input type='text' placeholder="title" value={title}
-                        onChange={event=> setTitle(event.target.value)}>
-                        </Input>
-                    </FormGroup>
+                <Form className="form-size button">
                     <FormGroup>
                         <Input type='textarea' placeholder="message" value={message}
                         onChange={event=> setMessage(event.target.value)}>
@@ -39,7 +33,7 @@ export default function ReactToRoom() {
                         <Button color="primary"  type="submit" onClick={submitForm}>Send</Button>
                     </FormGroup>
                 </Form>
-            </Container>
+            
         </div>
     )
 }

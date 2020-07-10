@@ -51,7 +51,7 @@ export default function RoomPageCardDetail(props) {
     // set proprieties for google map
     const libraries= ["places"];
     const mapContainerStyle={
-        width:"50em",
+        width:"74em",
         height:"22em",
         margin:"auto",
         marginBottom: "1em",
@@ -79,16 +79,20 @@ export default function RoomPageCardDetail(props) {
         roomRespondMessages.map((message)=><RoomMessage key={message.id} {...message}/> );
     
     return (
-        <div>
-            <section className="formRoomDetail">  
-                    <img src={image} alt={"the pic"} id="img-presentation"/>
-                    
-                    <div>
-                        <h3>{title}</h3>
-                        <p>{location}</p>
-                        <p>{description}</p>
-                    </div> 
-                    <div>
+        <div style={{marginTop:'3em'}}>
+            <section className="formRoomDetail"> 
+
+                    <div className="first-part">
+                        <img src={image} alt={"the pic"} id="img-presentation"/>
+                        
+                        <div>
+                            <h3>{title}</h3>
+                            <p>{location}</p>
+                            <p>{description}</p>
+                        </div> 
+                    </div>
+                   
+                    <div style={{marginTop:"2em"}}>
                         <GoogleMap 
                         mapContainerStyle={mapContainerStyle} 
                         zoom={12} 
