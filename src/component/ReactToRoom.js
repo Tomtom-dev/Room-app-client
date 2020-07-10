@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
-import {Container, Button, Form, Input,FormGroup} from 'reactstrap'
+import { Button, Form, Input,FormGroup} from 'reactstrap'
 import { useDispatch } from "react-redux";
 import {createNewMessage} from '../store/room_respond/action'
 
 export default function ReactToRoom() {
 
     const dispatch = useDispatch();
-    const [title, setTitle] = useState("")
+   
     const [message, setMessage] = useState("")
 
     function submitForm(event){
@@ -16,7 +16,7 @@ export default function ReactToRoom() {
         
         dispatch(createNewMessage({message}))
 
-        setTitle("")
+        
         setMessage("")
 
     }
