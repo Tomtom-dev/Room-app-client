@@ -44,7 +44,7 @@ const loginSuccess = userWithToken => {
            })
 
            dispatch(loginSuccess(response.data))
-           history.push("/announce")
+           history.push("/rooms")
            dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));
       } catch (error){
         if(error.response){

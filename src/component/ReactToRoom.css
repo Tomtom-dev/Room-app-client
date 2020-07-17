@@ -1,8 +1,7 @@
 .formMessageDetail{
     padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    width: 60em;
+    margin: 2em;
+    width: 76em;
     border: 2px solid #d3d3d3;
     border-radius: 5px;
     display:flex;
