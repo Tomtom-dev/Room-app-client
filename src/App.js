@@ -9,10 +9,15 @@ import Navbar from './component/Navbar'
 import SignUp from './pages/SignUp'
 import RoomPageDetail from './component/RoomPageDetail'
 
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+
+
 function App() {
   return (
     <Router>
       <div className="App">
+          <ReactNotification/>
           <Navbar/>
           <Switch>
             <Route exact path="/" component={Homepage}/>
