@@ -41,7 +41,6 @@ export const createNewMessage = (newMessage) =>async (dispatch,getState)=>{
 export const getAllMessages = () => async (dispatch, getState) =>{
     try{
         const id = getState().roomPageDetailReducer.roomSelected.id
-        console.log('logue', id);
         
         const response = await axios.get(`https://room-for-help.herokuapp.com/roomrespond/${id}`)
         

@@ -18,10 +18,10 @@ export default function Rooms() {
 
   let filteredRooms = roomPages.filter(room=>{
       const matchRoom = room.location === place
-      if(matchRoom){
-          return true
-      }else if (place ==="value" || place === "defaultValue") {
+      if(place ==="value" || place === "defaultValue"){
           return roomPages
+      }else if ( matchRoom) {
+          return true
       }else{
           return false
       }
