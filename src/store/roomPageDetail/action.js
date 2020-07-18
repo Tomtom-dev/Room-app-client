@@ -16,6 +16,7 @@ const addNewRoom = newRoom => ({
 })
 
 // notification message
+
 function testNotification(){
     store.addNotification({
         type:"success",
@@ -26,7 +27,7 @@ function testNotification(){
         animationIn: ['animated', 'fadeIn'],
         animationOut: ['animated', 'fadeOut'],
         dismiss:{
-            duration: 10000,
+            duration: 8000,
             showIcon: true
         },
         width:800
