@@ -10,21 +10,17 @@ export default function Homepage() {
     return(
         <header>
             <div >
-
-            {/* <iframe id="background-video" src={videosource} title="video"></iframe> */}
-
-            
                 <video id="background-video" autoPlay loop muted >
                         <source src={Presentation} type="video/mp4"/>
                 </video>
             </div>
             <div className="header-overlay"></div>
             <div className="header-content">
-                <h1>Homeshare</h1>
-                <p>Where we match students in need for a low-cost accommodation with an older person with a spare room.
-
-There are a lot of benefits to both the Householder and Homesharer .</p>
-
+                <h1>Room For Help</h1>
+                <p>In big cities, lot of senior live alone in a big space and have difficulty to maintain it sometimes.</p>
+                <p>On the other hand, for student and young workers the price of renting is very high.</p>
+                <p>This website connect senior who propose a room to a student or worker in exchange of help or very low-cost rent.
+                    The help can be cleaning, gardening, do shopping or groceries for example.</p>    
                 <Link to="/rooms">
                     <button className="myButton">see the Rooms</button>
                 </Link>
