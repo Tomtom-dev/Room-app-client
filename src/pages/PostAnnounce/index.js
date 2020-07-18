@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import {selectUserId} from '../../store/user/selector'
 import { useHistory } from "react-router-dom";
 
-
 export default function PostAnnounce() {
 
     const [title, setTitle] = useState("")
@@ -39,7 +38,6 @@ export default function PostAnnounce() {
        setLoading(false)
    }
     
-
     function submitForm (event){
         event.preventDefault();
         console.log("submit the new post")
@@ -76,7 +74,6 @@ export default function PostAnnounce() {
                     <Button color="primary"  type="submit" onClick={submitForm}>Post</Button>
                     </FormGroup>
                 </Form>
-                
             </Container>
             
         </div>

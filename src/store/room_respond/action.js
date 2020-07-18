@@ -1,8 +1,25 @@
 import axios from 'axios'
-
+import { store } from 'react-notifications-component';
 
 const NEW_MESSAGE="NEW_MESSAGE"
 const ALL_MESSAGE= "ALL_MESSAGE"
+
+function messageSendNotification(){
+    store.addNotification({
+        type:"success",
+        title: "you message is sent !",
+        message: "Your message has been successfully sent",
+        container:"top-center",
+        insert: "top",
+        animationIn: ['animated', 'fadeIn'],
+        animationOut: ['animated', 'fadeOut'],
+        dismiss:{
+            duration: 8000,
+            showIcon: true
+        },
+        width:800
+    })
+}
 
 const addNewMessage = newMess =>({
     type: NEW_MESSAGE,
@@ -14,10 +31,10 @@ const showAllMessages = AllMess =>({
     payload: AllMess
 })
 
+
+
+
 // create a new message
-
-
-
 export const createNewMessage = (newMessage) =>async (dispatch,getState)=>{
     try{
         
@@ -32,6 +49,7 @@ export const createNewMessage = (newMessage) =>async (dispatch,getState)=>{
             userId,
             roomId
         })
+        messageSendNotification()
         dispatch(addNewMessage(response.data))
     }catch(error){
         console.log(error);

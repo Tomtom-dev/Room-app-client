@@ -1,4 +1,6 @@
 import axios from "axios"
+import { store } from 'react-notifications-component';
+
 
 const loginSuccess = userWithToken => {
     return {
@@ -35,6 +37,25 @@ const loginSuccess = userWithToken => {
     };
   };
 
+  // notification message when account created
+
+  function accountCreatedNotification(){
+    store.addNotification({
+        type:"success",
+        title: "Registration done!",
+        message: "Your profil has been successfully created, check your emails",
+        container:"top-center",
+        insert: "top",
+        animationIn: ['animated', 'fadeIn'],
+        animationOut: ['animated', 'fadeOut'],
+        dismiss:{
+            duration: 8000,
+            showIcon: true
+        },
+        width:800
+    })
+}
+
   export const login = (email,password,history) =>{
       return async (dispatch,getState)=>{
         try {
@@ -61,7 +82,7 @@ const loginSuccess = userWithToken => {
 
 export const logOut = () => ({ type: "LOG_OUT" });
 
-export const signUp = (name, email, password,age,history) => {
+export const signUp = (name, email, password,age) => {
   return async (dispatch, getState) => {
     
     try {
@@ -69,12 +90,12 @@ export const signUp = (name, email, password,age,history) => {
         name,
         email,
         password,
-        history,
         age
       });
       console.log('search',response);
-      history.push("/announce")
+      
       dispatch(loginSuccess(response.data));
+      accountCreatedNotification()
       dispatch(showMessageWithTimeout("success", true, "account created"));
       ;
     } catch (error) {
