@@ -20,7 +20,7 @@ export default function Homepage() {
                 <p>In big cities, lot of senior live alone in a big space and have difficulty to maintain it sometimes.</p>
                 <p>On the other hand, for student and young workers the price of renting is very high.</p>
                 <p>This website connect senior who propose a room to a student or worker in exchange of help or very low-cost rent.
-                    The help can be cleaning, gardening, do shopping or groceries for example.</p>    
+                   </p>    
                 <Link to="/rooms">
                     <button className="myButton">see the Rooms</button>
                 </Link>
