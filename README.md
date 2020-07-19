@@ -1,5 +1,5 @@
 
-:older_woman: :older_man: Room-for-help App :woman: :man:
+# :older_woman: :older_man: Room-for-help App :woman: :man:
 
 
 ## what this app is about
