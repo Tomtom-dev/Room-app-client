@@ -23,7 +23,7 @@ In big cities, lot of senior live alone in a big space and have difficulty to ma
 
 ![room-for-help_Screenshot1](https://github.com/Tomtom-dev/Room-app-client/blob/development/roomForHelp%20Pictures/screenshot-1.png)
 ![room-for-help_Screenshot2](https://github.com/Tomtom-dev/Room-app-client/blob/development/roomForHelp%20Pictures/Screenshot-2.png)
-![room-for-help-gif1](https://github.com/Tomtom-dev/Room-app-client/blob/development/roomForHelp%20Pictures/sample%20Gif.webm)
+![room-for-help-webm1](https://github.com/Tomtom-dev/Room-app-client/blob/development/roomForHelp%20Pictures/sample%20Gif.webm)
 
 
 ### Technology used
