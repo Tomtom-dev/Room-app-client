@@ -3,6 +3,7 @@ import{Container,Button, Form, Label, Input, FormGroup} from 'reactstrap'
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {signUp} from '../../store/user/action'
+import './index.css'
 
 export default function SignUp() {
 
@@ -26,11 +27,11 @@ export default function SignUp() {
     }
 
     return (
-        <div>
+        <div className="test">
             
             <Container >
             
-                <Form className="form-size contain">
+                <Form className="form-size contain ">
                 <h2>Sign up</h2>
                     <FormGroup>
                         <Input type='text' placeholder="Name" 

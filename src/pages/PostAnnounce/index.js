@@ -5,6 +5,7 @@ import {createNewPost} from '../../store/roomPageDetail/action'
 import { useDispatch, useSelector } from "react-redux";
 import {selectUserId} from '../../store/user/selector'
 import { useHistory } from "react-router-dom";
+import './index.css'
 
 export default function PostAnnounce() {
 
@@ -52,7 +53,7 @@ export default function PostAnnounce() {
     }
 
     return (
-        <div>
+        <div className="post-page">
             <Container >
                 <Form className="form-size contain">
                     <h1>Post a room</h1>

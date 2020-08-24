@@ -10,11 +10,15 @@ export default function Rooms() {
   const dispatch = useDispatch();
   const [place, setPlace] = useState("value")
   
+  
+  
   useEffect(() => {
     dispatch(fetchRooms());
   }, [dispatch]);
 
   // Filter with the slider
+
+  
 
   let filteredRooms = roomPages.filter(room=>{
       const matchRoom = room.location === place
@@ -48,6 +52,7 @@ export default function Rooms() {
           })}
           </select>
         </form>
+        {/* loading ? <div>Loading ...</div> : */}
       {roomsToRender()}
     </div>
   );

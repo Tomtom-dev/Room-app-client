@@ -29,7 +29,7 @@ export default function Login() {
     }
 
     return (
-        <div>
+        <div className="test">
             <Container>
                 <Form className="contain" >
                 <h2 >Login</h2>

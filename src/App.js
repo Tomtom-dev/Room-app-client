@@ -28,6 +28,7 @@ function App() {
             <Route exact path="/login" component={Login}/>
             <Route exact path="/signup" component={SignUp}/>
           </Switch>
+          <footer className="footer"> All right reserved.</footer>
       </div>
     </Router>
     
