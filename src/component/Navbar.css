@@ -62,10 +62,9 @@ nav.container
     background-color: #424242;
 }
 
-
-
-@media(min-width:100vh){
-    .container{
+@media (min-width: 992px){
+    nav.container {
         max-width: 100%;
     }
 }
+
