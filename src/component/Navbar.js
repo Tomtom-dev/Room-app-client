@@ -18,7 +18,7 @@ export default function Navbar (){
                     <NavLink to="/rooms" className="button">Rooms</NavLink>
                     {age?(<NavLink to="/announce" className="button">Post a room</NavLink>):
                     (null)}
-                    {age?(<NavLink to="/homepage" onClick={() => dispatch(logOut())}>Log Out</NavLink>):
+                    {age?(<NavLink to="/homepage" className="button" onClick={() => dispatch(logOut())}>Log Out</NavLink>):
                     (<NavLink to="/login" className="button">Login</NavLink>)}
                 </ul>
         </nav>
