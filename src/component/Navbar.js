@@ -12,7 +12,7 @@ export default function Navbar (){
 
 
     return(
-        <nav className="nav-wrapper grey darken-3">
+        <nav className="container grey darken-3 topBotomBordersIn">
                 <ul >
                     <NavLink to="/homepage" className="button" >Home</NavLink>
                     <NavLink to="/rooms" className="button">Rooms</NavLink>

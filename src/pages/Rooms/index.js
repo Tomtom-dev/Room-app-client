@@ -1,7 +1,7 @@
 import React, {  useEffect,useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRooms } from "../../store/roomPage/action";
-import { getRoomPage } from "../../store/roomPage/selector";
+import { getRoomPage,getRoomPageLoading } from "../../store/roomPage/selector";
 import RoomPageCard from "../../component/RoomPageCard";
 
 
@@ -9,6 +9,9 @@ export default function Rooms() {
   const roomPages = useSelector(getRoomPage);
   const dispatch = useDispatch();
   const [place, setPlace] = useState("value")
+  const Loading = useSelector(getRoomPageLoading)
+
+  console.log("give me the load !", Loading);
   
   
   
@@ -52,8 +55,8 @@ export default function Rooms() {
           })}
           </select>
         </form>
-        {/* loading ? <div>Loading ...</div> : */}
-      {roomsToRender()}
+        {Loading ? <div>Loading ...</div> :roomsToRender()}
+      
     </div>
   );
 }

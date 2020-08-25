@@ -16,11 +16,11 @@ export default function Homepage() {
             </div>
             <div className="header-overlay"></div>
             <div className="header-content">
-                <h1>Room For Help</h1>
-                <p>In big cities, lot of senior live alone in a big space and have difficulty to maintain it sometimes.</p>
-                <p>On the other hand, for student and young workers the price of renting is very high.</p>
-                <p>This website connect senior who propose a room to a student or worker in exchange of help or very low-cost rent.
-                   </p>    
+                <h2>Room For Help</h2>
+                <p>In big cities, lot of senior live alone in a big space and have difficulty to maintain it sometimes.
+                On the other hand, for student and young workers the price of renting is very high.
+                </p>
+                <p>This website connect senior who propose a room to a student or worker in exchange of help or very low-cost rent.</p>    
                 <Link to="/rooms">
                     <button className="myButton">see the Rooms</button>
                 </Link>

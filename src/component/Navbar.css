@@ -1,12 +1,71 @@
+
 nav ul{
     display:flex;
     justify-content:space-around;
+    align-items: center;
 }
 
-.button:hover {
-    color: blue;
+nav.container
+{  
+    padding: 1em 3em;
+    margin: auto;
+    width: 100%; 
 }
 
-.active {
-    background-color:  rgb(52, 97, 97);;
+.container a
+{
+    
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 9px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    
+}
+
+/* Top and Bottom borders come in */
+.topBotomBordersIn a:before, .topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.topBotomBordersIn a:hover:before, .topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.button:hover{
+    color:  #FFF;
+    text-decoration: none;
+    background-color: #424242;
+}
+
+
+
+@media(min-width:100vh){
+    .container{
+        max-width: 100%;
+    }
 }
