@@ -55,7 +55,7 @@ export default function Rooms() {
           })}
           </select>
         </form>
-        {Loading ? <div>Loading ...</div> :roomsToRender()}
+        {Loading ? <h2>Loading ...</h2> :roomsToRender()}
       
     </div>
   );
