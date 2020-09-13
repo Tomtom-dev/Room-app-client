@@ -70,7 +70,7 @@ export default function PostAnnounce() {
                          placeholder="description" value={description} onChange={event => setDescription(event.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                    {loading?(<h3>Loading ...</h3>):(<img src={image} alt="selected" id="img-preview" style={{maxWidth:'350px'}}/>)}
+                    {loading?(<h3 className="lds-dual-ring">Loading</h3>):(<img src={image} alt="selected" id="img-preview" style={{maxWidth:'350px'}}/>)}
                     <Input type="file" name="file" id="file-upload"  onChange={uploadImage}/>
                     <p style={{marginLeft:"3px", textAlign:"left", fontSize:"13px"}}>upload one picture to illustrate your post size-max: 3mo </p>
                     <Button color="primary"  type="submit" onClick={submitForm}>Post</Button>

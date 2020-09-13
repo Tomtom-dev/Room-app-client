@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchRooms } from "../../store/roomPage/action";
 import { getRoomPage,getRoomPageLoading } from "../../store/roomPage/selector";
 import RoomPageCard from "../../component/RoomPageCard";
+import "./index.css"
 
 
 export default function Rooms() {
@@ -50,7 +51,7 @@ export default function Rooms() {
           })}
           </select>
         </form>
-        {Loading ? <h2>Loading ...</h2> : roomsToRender()}
+        {Loading ? <h2 className="lds-dual-ring">Loading ...</h2> : roomsToRender()}
       
     </div>
   );
