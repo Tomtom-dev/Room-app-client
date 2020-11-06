@@ -87,8 +87,8 @@ export default function RoomPageCardDetail(props) {
                         
                         <div>
                             <h3>{title}</h3>
-                            <p>{location}</p>
-                            <p>{description}</p>
+                            <p className="location-text">Location :{location}</p>
+                            <p className="description-text">{description}</p>
                         </div> 
                     </div>
                    
@@ -110,7 +110,7 @@ export default function RoomPageCardDetail(props) {
                     <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
                     {editPost ? (<ReactToRoom/>):(null)}
             </section>
-            <h4 style={{ marginRight:"28em"}}>Message</h4>
+            <h4 className="rtest">Message</h4>
             <div style={{width:"76em",margin:"auto"}}>
                 {messageToRender()}
             </div>
