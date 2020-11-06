@@ -111,7 +111,10 @@ export default function RoomPageCardDetail(props) {
                     {editPost ? (<ReactToRoom/>):(null)}
             </section>
             <h4 style={{ marginRight:"28em"}}>Message</h4>
-            {messageToRender()}
+            <div style={{width:"76em",margin:"auto"}}>
+                {messageToRender()}
+            </div>
+            
         </div>
     )
 }

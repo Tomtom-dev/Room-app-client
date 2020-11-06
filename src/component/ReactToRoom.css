@@ -1,11 +1,10 @@
 .formMessageDetail{
     padding: 1em;
-    margin: 2em;
+    margin-bottom: 1em;
     width: 76em;
     border: 2px solid #d3d3d3;
     border-radius: 5px;
     display:flex;
-    margin: auto;
     background-color:#c0f1d9
 }
 
