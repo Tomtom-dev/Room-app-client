@@ -16,9 +16,10 @@ code {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
-  display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  position: fixed;
   bottom: 0;
 }
 
