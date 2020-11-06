@@ -51,7 +51,10 @@ export default function Rooms() {
           })}
           </select>
         </form>
-        {Loading ? <h2 className="lds-dual-ring">Loading ...</h2> : roomsToRender()}
+        <div className="rooom">
+          {Loading ? <h2 className="lds-dual-ring">Loading ...</h2> : roomsToRender()}
+        </div>
+        
       
     </div>
   );
