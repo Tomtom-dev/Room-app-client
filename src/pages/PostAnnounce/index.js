@@ -55,8 +55,9 @@ export default function PostAnnounce() {
     return (
         <div className="post-page">
             <Container >
+            <h1 className="title-page">Post a room</h1>
                 <Form className="form-size contain">
-                    <h1>Post a room</h1>
+                    
                     <FormGroup>
                         <Input type='text' placeholder="title"
                          value={title} onChange={event => setTitle(event.target.value)}></Input>

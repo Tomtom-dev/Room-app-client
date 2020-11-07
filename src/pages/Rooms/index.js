@@ -35,7 +35,7 @@ export default function Rooms() {
 
   return (
     <div>
-      
+        <h1 className="title-page">Rooms</h1>
         <form style={{width:"15em", marginLeft:"24em", marginBottom:"2em", margin:'auto',marginTop:"1em", paddingBottom:"2em"}}>
           <select className="custom-select"
             onChange={(event)=>setPlace(event.target.value)}
