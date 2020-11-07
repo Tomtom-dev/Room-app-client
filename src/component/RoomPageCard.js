@@ -13,7 +13,7 @@ export default function RoomPageCard(props) {
     return (
         <div>
             <section className="RoomCard" >
-                <img src={image} className="" alt={"room picture"}/>
+                <img src={image} className="" alt={"room "}/>
                 <div className="info-room">
                     <h5>{title}</h5>
                     <p>{description}</p>
