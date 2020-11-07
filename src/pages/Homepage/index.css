@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
 #background-video{
     position: fixed;
     right: 0;
@@ -6,6 +8,7 @@
     min-height: 100%;
     overflow:hidden;
 }
+
 
 .header-overlay{
     position: fixed;
@@ -17,22 +20,13 @@
     bottom: 90;
 }
 
-/* .header-content{
-    z-index:2;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-    bottom:0;
-} */
-
 /* Animation title */
 .title-page{
-  font-size: 10em;
+  font-family: 'Ultra', serif;
+  font-size: 8em;
   animation-name: slideTitle;
   animation-fill-mode: both;
-  animation-duration: 3.5s;
+  animation-duration: 2s;
 }
 
 @keyframes slideTitle{
@@ -47,8 +41,8 @@
   color: #ffffff;
   animation-name: slideText;
   animation-fill-mode: both;
-  animation-duration: 3.5s;
-  animation-delay: 4s;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
 }
 
 .second-line{
@@ -56,15 +50,23 @@
   color: #ffffff;
   animation-name: slideText;
   animation-fill-mode: both;
-  animation-duration: 3.5s;
-  animation-delay: 8s;
+  animation-duration: 2.5s;
+  animation-delay: 5s;
+}
+.third-line{
+  font-size: 20px;
+  color: #ffffff;
+  animation-name: slideText;
+  animation-fill-mode: both;
+  animation-duration: 2.5s;
+  animation-delay: 7s;
 }
 
 .button-animation{
   animation-name: slideText;
   animation-fill-mode: both;
-  animation-duration: 3.5s;
-  animation-delay: 12s;
+  animation-duration: 2.5s;
+  animation-delay: 9s;
 }
 
 @keyframes slideText{
