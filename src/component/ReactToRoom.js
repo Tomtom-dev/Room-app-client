@@ -6,7 +6,6 @@ import {createNewMessage} from '../store/room_respond/action'
 export default function ReactToRoom() {
 
     const dispatch = useDispatch();
-   
     const [message, setMessage] = useState("")
 
     function submitForm(event){
@@ -14,9 +13,7 @@ export default function ReactToRoom() {
         console.log("submit new post");
         console.log(message);
         
-        dispatch(createNewMessage({message}))
-
-        
+        dispatch(createNewMessage({message}))     
         setMessage("")
 
     }

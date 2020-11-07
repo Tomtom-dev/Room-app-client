@@ -5,16 +5,11 @@ import Button from "react-bootstrap/Button";
 import { useDispatch} from "react-redux";
 import { Link,useHistory } from "react-router-dom";
 import {login} from "../../store/user/action"
-// import { selectToken } from "../../store/user/selector";
-// import {selectUserName} from "../../store/user/selector";
-// import {selectUserEmail} from "../../store/user/selector";
 import "./Login.css"
 
 export default function Login() {
 
     const dispatch = useDispatch();
-    // const token = useSelector(selectToken);
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const history = useHistory();

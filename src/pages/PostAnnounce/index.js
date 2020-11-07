@@ -43,7 +43,6 @@ export default function PostAnnounce() {
         event.preventDefault();
         console.log("submit the new post")
         console.log(title, location, description, userId, image)
-
         dispatch(createNewPost({title, location, description, image, history}))
 
         setTitle("")
