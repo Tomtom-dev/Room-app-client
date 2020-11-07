@@ -6,8 +6,11 @@ export default function RoomMessage(props) {
     const{message}=props
 
     return (
-        <div className="formMessageDetail">
-            <p style={{textAlign:"left"}}>{message}</p>
+        <div className="messages_container"> 
+            <div className="formMessageDetail">
+                <p style={{textAlign:"left"  }}>{message}</p>
+            </div>
         </div>
+        
     )
 }

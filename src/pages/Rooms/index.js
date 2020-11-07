@@ -35,8 +35,8 @@ export default function Rooms() {
 
   return (
     <div>
-      <h1>Rooms</h1>
-        <form style={{width:"15em", marginLeft:"24em", marginBottom:"2em", margin:'auto', paddingBottom:"2em"}}>
+        <h1 className="title-page">Rooms</h1>
+        <form style={{width:"15em", marginLeft:"24em", marginBottom:"2em", margin:'auto',marginTop:"1em", paddingBottom:"2em"}}>
           <select className="custom-select"
             onChange={(event)=>setPlace(event.target.value)}
             >
@@ -51,7 +51,10 @@ export default function Rooms() {
           })}
           </select>
         </form>
-        {Loading ? <h2 className="lds-dual-ring">Loading ...</h2> : roomsToRender()}
+        <div className="rooom">
+          {Loading ? <h2 className="lds-dual-ring">Loading ...</h2> : roomsToRender()}
+        </div>
+        
       
     </div>
   );

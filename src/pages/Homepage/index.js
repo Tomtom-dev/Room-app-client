@@ -14,18 +14,23 @@ export default function Homepage() {
                         <source src={Presentation} type="video/mp4"/>
                 </video>
             </div>
-            <div className="header-overlay"></div>
-            <div className="header-content">
-                <h2>Room For Help</h2>
-                <p>In big cities, lot of senior live alone in a big space and have difficulty to maintain it sometimes.
-                On the other hand, for student and young workers the price of renting is very high.
-                </p>
-                <p>This website connect senior who propose a room to a student or worker in exchange of help or very low-cost rent.</p>    
-                <Link to="/rooms">
-                    <button className="myButton">see the Rooms</button>
-                </Link>
-                
+            
+            <div className="header-overlay">
+                <div >
+                    <h1 className="title-page">Room for help</h1>
+                    <p className="first-line">In big cities, lot of senior live alone in a big space and have difficulty to maintain it sometimes.
+                    
+                    <p className="second-line">On the other hand, for student and young workers the price of renting is very high.</p>
+                    </p>
+                    <p className="third-line">This website connect senior who propose a room to a student or worker in exchange of help or very low-cost rent.</p>    
+                    <Link to="/rooms">
+                        <button className="myButton button-animation">see the Rooms</button>
+                    </Link>
+                    
+                </div>
+
             </div>
+            
             
         </header>
     )

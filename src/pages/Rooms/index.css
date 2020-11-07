@@ -2,6 +2,7 @@
 
 
 .lds-dual-ring {
+  margin: auto;
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -25,4 +26,11 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  .rooom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
   }

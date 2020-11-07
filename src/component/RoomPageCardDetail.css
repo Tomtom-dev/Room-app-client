@@ -5,9 +5,8 @@
 }
 
 .formRoomDetail{
-    
-    padding: 1em;
-    margin: 1em;
+    background-color:#c0f1d9;
+    padding: 1em;  
     width: 76em;
     border: 2px solid #d3d3d3;
     border-radius: 5px;
@@ -24,4 +23,25 @@
 .first-part {
     display: flex;
     flex-direction: row;
+}
+
+.first-part div h3{
+    margin-top: 2em;
+}
+
+.location-text{
+    margin-top: 1em;
+    font-size: 15px;
+}
+
+.description-text{
+    font-size: 15px;
+    background-color: #c0f1d9;
+    z-index: 2;
+}
+
+h4 {
+    margin-top: 2em;
+    text-align: left;
+    margin: 20em;
 }

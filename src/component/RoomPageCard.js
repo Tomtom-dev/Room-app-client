@@ -11,9 +11,9 @@ export default function RoomPageCard(props) {
     const age = useSelector(selectUserAge)
 
     return (
-        <div >
+        <div>
             <section className="RoomCard" >
-                <img src={image} alt={"the pic"} style={{maxWidth:"350px", maxHeight:"220px"} }/>
+                <img src={image} className="" alt={"room picture"}/>
                 <div className="info-room">
                     <h5>{title}</h5>
                     <p>{description}</p>
