@@ -7,6 +7,8 @@ import {getRoomRespond} from "../store/room_respond/selector"
 import {getAllMessages} from '../store/room_respond/action'
 import mapStyles from "./mapStyles"
 // import {formatRelative} from 'date-fns'
+import {selectUserId} from '../store/user/selector'
+import {selectRoomDetailsUserId} from "../store/roomPageDetail/selector"
 import ReactToRoom from './ReactToRoom'
 import RoomMessage from './RoomMessage'
 import './RoomPageCardDetail.css'
@@ -31,6 +33,8 @@ export default function RoomPageCardDetail(props) {
     // get the adress
     const roomRespondMessages= useSelector(getRoomRespond)
     const adressForRoom = useSelector(selectRoomDetails).location
+    const getUserId =useSelector(selectUserId)
+    const getRoomRespondUserId= useSelector(selectRoomDetailsUserId)
 
 
     //transform the adress to latitude and longitude with 
@@ -73,7 +77,12 @@ export default function RoomPageCardDetail(props) {
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
 
-    
+    // function allow user to see if the user who post the room to see the message
+    function messageForUser() {
+        if(getUserId === getRoomRespondUserId){
+            return true;
+        }else return false;
+    } 
 
     const messageToRender= () => 
         roomRespondMessages.map((message)=><RoomMessage key={message.id} {...message}/> );
@@ -110,9 +119,9 @@ export default function RoomPageCardDetail(props) {
                     <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
                     {editPost ? (<ReactToRoom/>):(null)}
             </section>
-            <h4 className="rtest">Message</h4>
+            <h4 className="message-title">Message</h4>
             <div style={{width:"76em",margin:"auto"}}>
-                {messageToRender()}
+                {messageForUser() ? messageToRender() :  <p></p>}
             </div>
             
         </div>
