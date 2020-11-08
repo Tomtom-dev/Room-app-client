@@ -9,6 +9,7 @@ export default function RoomMessage(props) {
         <div className="messages_container"> 
             <div className="formMessageDetail">
                 <p style={{textAlign:"left"  }}>{message}</p>
+                <button style={{textAlign:"right"  }}>Answer by email</button>
             </div>
         </div>
         
