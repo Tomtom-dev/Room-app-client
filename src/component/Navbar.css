@@ -14,7 +14,6 @@ nav.container
 
 .container a
 {
-    
     text-decoration: none;
     font: 20px Raleway;
     margin: 0px 10px;
@@ -22,7 +21,6 @@ nav.container
     position: relative;
     z-index: 0;
     cursor: pointer;
-    
 }
 
 /* Top and Bottom borders come in */
@@ -65,9 +63,11 @@ nav.container
 @media screen and (max-width: 768px){
     nav.container {
         max-width: 100%;
+        height: 6.5em;
     }
     a.button{
         font-size: 1.2em;
     }
+    
 }
 
