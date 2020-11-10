@@ -24,6 +24,12 @@
     width: 350px;
     height: 220px;
   }
+
+  img:hover{
+    transform: rotateX(360deg);
+    animation-name: flip;
+    animation-duration: 2s;
+  }
   
   .container {
     padding: 2px 16px;
@@ -31,6 +37,11 @@
 
   .info-room{
     margin: auto;
+  }
+
+  @keyframes flip{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
   }
 
   @media screen and (max-width: 768px){
