@@ -17,7 +17,7 @@ export default function RoomPageCard(props) {
                     <div className="RoomCard-front">
                         <img src={image} className="" alt={"room "}/>
                     </div>
-                    <div className="RoomCard-back">
+                    <div className=" RoomCard-back">
                             <div className="info-room">
                                 <h5>{title}</h5>
                                 <p>City : {location}</p>
