@@ -12,6 +12,7 @@
     "date-fns": "^2.14.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
+    "react-card-flip": "^1.0.11",
     "react-dom": "^16.13.1",
     "react-geocode": "^0.2.1",
     "react-google-maps": "^9.4.5",

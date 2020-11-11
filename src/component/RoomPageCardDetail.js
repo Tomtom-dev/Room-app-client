@@ -55,8 +55,8 @@ export default function RoomPageCardDetail(props) {
     // set proprieties for google map
     const libraries= ["places"];
     const mapContainerStyle={
-        width:"74em",
-        height:"22em",
+        width:"100%",
+        height:"100%",
         margin:"auto",
         marginBottom: "1em",
     }
@@ -101,20 +101,24 @@ export default function RoomPageCardDetail(props) {
                         </div> 
                     </div>
                    
-                    <div style={{marginTop:"2em"}}>
-                        <GoogleMap 
-                        mapContainerStyle={mapContainerStyle} 
-                        zoom={12} 
-                        center={center}
-                        options={options}
-                        >
-                        <Marker 
-                        position={
-                            {lat:lat,
-                            lng:lng}
-                        }/>
-                        </GoogleMap>
-                    </div>
+                   <div className="googleMap-container">
+                    <div className="google-map" style={{marginTop:"2em"}} >
+                            <GoogleMap 
+                            mapContainerStyle={mapContainerStyle} 
+                            zoom={12} 
+                            center={center}
+                            options={options}
+                            
+                            >
+                            <Marker 
+                            position={
+                                {lat:lat,
+                                lng:lng}
+                            }/>
+                            </GoogleMap>
+                        </div>
+                   </div>
+                    
                     
                     <button id="btn-react"onClick={()=>seteditPost(!editPost)}>React to the post</button>
                     {editPost ? (<ReactToRoom/>):(null)}

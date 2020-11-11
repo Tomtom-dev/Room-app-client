@@ -49,3 +49,28 @@ h4 {
 .message-title{
     margin-bottom: 2em;
 }
+.google-map{
+    margin-top: 1em;
+    width:74em;
+    height: 22em;
+}
+
+@media screen and (max-width: 768px){
+    #img-presentation{
+        width: 20em;
+        height: 15em;
+    }
+    .google-map{
+        width: 20em;
+        height: 15em;
+        margin: auto;
+    }
+    .first-part{
+        display: flex;
+    flex-direction: column;
+    }
+    .formRoomDetail{
+        width: 25em;
+    }
+    
+}

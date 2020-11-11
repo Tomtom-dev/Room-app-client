@@ -37,7 +37,7 @@
 /* Animation presentation */
 
 .first-line{
-  font-size: 20px;
+  font-size: 2em;
   color: #ffffff;
   animation-name: slideText;
   animation-fill-mode: both;
@@ -46,7 +46,7 @@
 }
 
 .second-line{
-  font-size: 20px;
+  
   color: #ffffff;
   animation-name: slideText;
   animation-fill-mode: both;
@@ -54,7 +54,7 @@
   animation-delay: 5s;
 }
 .third-line{
-  font-size: 20px;
+  font-size: 2em;
   color: #ffffff;
   animation-name: slideText;
   animation-fill-mode: both;
@@ -111,4 +111,14 @@
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+
+
+@media screen and (max-width: 768px){
+  .title-page {
+    font-size: 4.5em;
+  }
+  .first-line, .third-line{
+    font-size: 1.3em;
+  }
 }
