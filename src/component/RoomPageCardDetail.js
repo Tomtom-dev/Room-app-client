@@ -124,7 +124,7 @@ export default function RoomPageCardDetail(props) {
                     {editPost ? (<ReactToRoom/>):(null)}
             </section>
             <h4 className="message-title">Message</h4>
-            <div style={{width:"76em",margin:"auto"}}>
+            <div className="answer-message" style={{width:"76em",margin:"auto"}}>
                 {messageForUser() ? messageToRender() :  <p></p>}
             </div>
             

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import ReactCardFlip from "react-card-flip"
+import React from 'react'
 import "./RoomPageCard.css"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -7,8 +6,7 @@ import {selectUserAge} from '../store/user/selector'
 
 export default function RoomPageCard(props) {
 
-    const [flip, setFlip] = useState(false);
-    const{title,image,description,location,id}= props
+    const{title,image,location,id}= props
 
     const age = useSelector(selectUserAge)
 
